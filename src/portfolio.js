@@ -13,7 +13,7 @@ const seo = {
   og: {
     title: "Yahya Rahimi Portfolio",
     type: "website",
-    url: "https://yahya-rahimi.netlify.app/",
+    url: "https://yahyarahimi.dev/",
   },
 };
 
