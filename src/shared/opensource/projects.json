@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": "health-compass",
+      "name": "Health Compass",
+      "createdAt": "2025-03-01T00:00:00Z",
+      "url": "https://allyfederation.org/en/health-compass",
+      "description": "Production wellness assessment platform for the International Ally Federation, featuring a multi-section assessment flow, scoring engine, D3 sunburst results, PDF export, email sharing, and multi-tenant SaaS foundations on Supabase and PostgreSQL.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "iconifyClass": "logos-typescript-icon"
+        },
+        {
+          "name": "Astro",
+          "iconifyClass": "simple-icons:astro"
+        },
+        {
+          "name": "Tailwind CSS",
+          "iconifyClass": "logos-tailwindcss-icon"
+        }
+      ]
+    },
+    {
+      "id": "iaf-website",
+      "name": "International Ally Federation Website",
+      "createdAt": "2024-09-01T00:00:00Z",
+      "url": "https://allyfederation.org/",
+      "description": "Bilingual English/Farsi website for the International Ally Federation nonprofit, built with Astro and Tailwind CSS, deployed on Netlify with serverless functions, transactional email, and GA4 analytics with cookie consent.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Astro",
+          "iconifyClass": "simple-icons:astro"
+        },
+        {
+          "name": "TypeScript",
+          "iconifyClass": "logos-typescript-icon"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        }
+      ]
+    },
+    {
+      "id": "problem-solving-app",
+      "name": "Problem Solving App",
+      "createdAt": "2023-06-01T00:00:00Z",
+      "url": "https://github.com/the-man-from-mars",
+      "description": "Full-stack problem-solving application built with Next.js and TypeScript on a MySQL database.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Next.js",
+          "iconifyClass": "simple-icons:nextdotjs"
+        },
+        {
+          "name": "TypeScript",
+          "iconifyClass": "logos-typescript-icon"
+        },
+        {
+          "name": "MySQL",
+          "iconifyClass": "logos-mysql"
+        }
+      ]
+    },
+    {
+      "id": "miro-chart-plugin",
+      "name": "Miro Chart Plugin",
+      "createdAt": "2022-08-01T00:00:00Z",
+      "url": "https://github.com/the-man-from-mars",
+      "description": "Miro board plugin that renders live charts from Google Sheets data, built with JavaScript, React, and the Google Sheets API.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
+        }
+      ]
+    },
+    {
+      "id": "university-resource-management",
+      "name": "University Resource Management System",
+      "createdAt": "2017-03-01T00:00:00Z",
+      "url": "https://github.com/the-man-from-mars",
+      "description": "Resource management system for university staff and students, built with PHP, Bootstrap, and MySQL.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "PHP",
+          "iconifyClass": "logos-php"
+        },
+        {
+          "name": "Bootstrap",
+          "iconifyClass": "logos-bootstrap"
+        },
+        {
+          "name": "MySQL",
+          "iconifyClass": "logos-mysql"
+        }
+      ]
+    }
+  ]
+}

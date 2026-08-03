@@ -1,0 +1,56 @@
+.project-card-div {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 4px solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 16px;
+  padding: 1.75rem 2rem;
+  text-align: left;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card-div:hover {
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 10px 24px;
+  transform: translateY(-3px);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-name {
+  font-family: "Google Sans Medium";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+
+.project-description {
+  font-family: "Google Sans Regular";
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0.9rem 0 0 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .project-card-div {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .project-name {
+    font-size: 19px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+}
