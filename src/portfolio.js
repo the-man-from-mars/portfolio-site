@@ -12,6 +12,42 @@ const seo = {
   },
 };
 
+// Per-route title and description. Read by SeoHeader at runtime and by
+// scripts/prerender.mjs at build time, so the static HTML and the rendered
+// app always agree.
+const routeMeta = {
+  "/": {
+    title: "Yahya Rahimi | Software Engineer",
+    description: seo.description,
+  },
+  "/education": {
+    title: "Education | Yahya Rahimi",
+    description:
+      "Academic background of Yahya Rahimi, including a B.CS (Honours) in Information Security and Assurance from Universiti Sains Islam Malaysia.",
+  },
+  "/experience": {
+    title: "Experience | Yahya Rahimi",
+    description:
+      "Eight years across the software lifecycle: backend engineering in Java and Scala, full-stack product development, and cloud infrastructure on AWS.",
+  },
+  "/projects": {
+    title: "Projects | Yahya Rahimi",
+    description:
+      "Products built end to end by Yahya Rahimi, from nonprofit platforms and SaaS features to developer tools.",
+  },
+  "/resume": {
+    title: "Resume | Yahya Rahimi",
+    description:
+      "Resume of Yahya Rahimi, software engineer specializing in backend systems, microservices, and full-stack web development.",
+  },
+  "/contact": {
+    title: "Contact | Yahya Rahimi",
+    description:
+      "Get in touch with Yahya Rahimi, a software engineer in San Diego open to new roles.",
+  },
+};
+routeMeta["/home"] = routeMeta["/"];
+
 //Home Page
 const greeting = {
   title: "Yahya Rahimi",
@@ -343,6 +379,7 @@ const contactPageData = {
 
 export {
   seo,
+  routeMeta,
   greeting,
   socialMediaLinks,
   skills,

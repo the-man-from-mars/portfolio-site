@@ -2,6 +2,42 @@
   command = "npm run build"
   publish = "build"
 
+# Each route has a prerendered HTML file (see scripts/prerender.mjs) so that
+# clients which do not execute JavaScript still get real content and
+# route-specific metadata. These rules must come before the SPA catch-all,
+# otherwise every path would fall through to index.html.
+
+[[redirects]]
+  from = "/home"
+  to = "/home.html"
+  status = 200
+
+[[redirects]]
+  from = "/education"
+  to = "/education.html"
+  status = 200
+
+[[redirects]]
+  from = "/experience"
+  to = "/experience.html"
+  status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/projects.html"
+  status = 200
+
+[[redirects]]
+  from = "/resume"
+  to = "/resume.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+# Client-side routing fallback for anything else.
 [[redirects]]
   from = "/*"
   to = "/index.html"

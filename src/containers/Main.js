@@ -6,6 +6,7 @@ import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import Error404 from "../pages/errors/error404/Error";
+import SeoHeader from "../components/seoHeader/SeoHeader";
 import ResumePage from "../pages/resume/Resume.js";
 
 export default class Main extends Component {
@@ -30,6 +31,9 @@ export default class Main extends Component {
   render() {
     return (
       <BrowserRouter basename="/">
+        {/* Rendered once, above the Switch, so it re-renders on navigation
+            instead of unmounting and remounting with each page. */}
+        <SeoHeader />
         <Switch>
           <Route
             path="/"
