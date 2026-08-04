@@ -1,10 +1,5 @@
 /* Change this file to get your personal Portfolio */
 
-// Website related settings
-const settings = {
-  isSplash: false, // Change this to true to enable the splash screen.
-};
-
 //SEO Related settings
 const seo = {
   title: "Yahya Rahimi's Portfolio",
@@ -24,9 +19,6 @@ const greeting = {
   nickname: "The man from Mars",
   subTitle:
     "Software Engineer with 5+ years of experience building scalable cloud systems and high-performance microservices in Java and Scala. I enjoy working across the full stack, from multi-tenant SaaS backends to modern web frontends, and shipping software that holds up in production.",
-  resumeLink: "/resume",
-  portfolio_repository: "https://github.com/the-man-from-mars/portfolio",
-  githubProfile: "https://github.com/the-man-from-mars",
 };
 
 const socialMediaLinks = [
@@ -245,10 +237,6 @@ const skills = {
 };
 
 // Education Page
-const competitiveSites = {
-  competitiveSites: [],
-};
-
 const degrees = {
   degrees: [
     {
@@ -279,10 +267,6 @@ const degrees = {
   ],
 };
 
-const certifications = {
-  certifications: [],
-};
-
 // Experience Page
 const experience = {
   title: "Experience",
@@ -301,7 +285,7 @@ const experience = {
           company_url: "https://allyfederation.org/",
           logo_path: "iaf_logo.png",
           duration: "Aug 2024 - Present",
-          location: "Oceanside, CA, USA",
+          location: "San Diego, CA, USA",
           description:
             "Leading development of the IAF website and Health Compass, a production wellness assessment platform, across UI, backend APIs, data persistence, and deployment. Built full-stack features in TypeScript, Astro, and Tailwind CSS, including a multi-section assessment flow, scoring engine, D3 results visualization, PDF export, and email-based results sharing. Currently extending the platform into a multi-tenant SaaS product with Supabase/PostgreSQL, row-level security, and Netlify Edge Functions. Also responsible for platform operations: GitHub Actions CI/CD, GA4 analytics, bilingual English/Farsi UX, and Microsoft 365 administration.",
           color: "#0E6BA8",
@@ -341,16 +325,6 @@ const projectsHeader = {
   avatar_image_path: "projects_image.svg",
 };
 
-const publicationsHeader = {
-  title: "Publications",
-  description: "Some of my published Articles, Blogs and Research.",
-  avatar_image_path: "projects_image.svg",
-};
-
-const publications = {
-  data: [],
-};
-
 // Contact Page
 const contactPageData = {
   contactSection: {
@@ -359,35 +333,21 @@ const contactPageData = {
     description:
       "I'm currently open to software engineering roles and collaborations. My background covers backend development with Java and Scala, full-stack web development with React and Next.js, and cloud infrastructure on AWS. If you would like to discuss a role or a project, reach out through any of the channels below. I usually reply within 24 hours.",
   },
+  // Used only for the Person structured data in SeoHeader.
   addressSection: {
-    title: "Address",
-    subtitle: "Oceanside, California, USA",
-    locality: "Oceanside",
-    country: "USA",
+    locality: "San Diego",
     region: "California",
-    postalCode: "",
-    streetAddress: "",
-    avatar_image_path: "address_image.svg",
-    location_map_link: "https://www.google.com/maps/place/Oceanside,+CA",
-  },
-  phoneSection: {
-    title: "",
-    subtitle: "",
+    country: "USA",
   },
 };
 
 export {
-  settings,
   seo,
   greeting,
   socialMediaLinks,
   skills,
-  competitiveSites,
   degrees,
-  certifications,
   experience,
   projectsHeader,
-  publicationsHeader,
-  publications,
   contactPageData,
 };
