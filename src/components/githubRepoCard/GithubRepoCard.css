@@ -54,3 +54,19 @@
     font-size: 15px;
   }
 }
+
+.project-case-study-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid;
+  border-radius: 30px;
+  font-family: "Google Sans Regular";
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-case-study-link:hover {
+  background-color: rgba(220, 47, 2, 0.1);
+}

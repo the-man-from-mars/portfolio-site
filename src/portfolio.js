@@ -2,11 +2,11 @@
 
 //SEO Related settings
 const seo = {
-  title: "Yahya Rahimi's Portfolio",
+  title: "Yahya Rahimi — Software Engineer | Backend, Full-Stack, Cloud",
   description:
-    "Portfolio of Yahya Rahimi, a software engineer specializing in scalable backend systems, microservices, and full-stack web development.",
+    "Yahya Rahimi is a software engineer with 7+ years building production systems: distributed microservices and REST APIs in Java and Scala, AWS infrastructure, and CI/CD. Based in Oceanside, CA (San Diego County).",
   og: {
-    title: "Yahya Rahimi Portfolio",
+    title: "Yahya Rahimi — Software Engineer | Backend, Full-Stack, Cloud",
     type: "website",
     url: "https://yahyarahimi.dev/",
   },
@@ -17,33 +17,38 @@ const seo = {
 // app always agree.
 const routeMeta = {
   "/": {
-    title: "Yahya Rahimi | Software Engineer",
+    title: seo.title,
     description: seo.description,
   },
   "/education": {
-    title: "Education | Yahya Rahimi",
+    title: "Education | Yahya Rahimi, Software Engineer",
     description:
-      "Academic background of Yahya Rahimi, including a B.CS (Honours) in Information Security and Assurance from Universiti Sains Islam Malaysia.",
+      "Academic background of Yahya Rahimi: B.Sc. Computer Science with Honours from Universiti Sains Islam Malaysia, GPA 3.75.",
   },
   "/experience": {
-    title: "Experience | Yahya Rahimi",
+    title: "Experience | Yahya Rahimi, Backend & Cloud Engineer",
     description:
-      "Eight years across the software lifecycle: backend engineering in Java and Scala, full-stack product development, and cloud infrastructure on AWS.",
+      "7+ years across the software lifecycle: distributed microservices in Java and Scala, REST APIs, AWS and Terraform infrastructure, and end-to-end ownership of a multi-tenant SaaS platform.",
   },
   "/projects": {
-    title: "Projects | Yahya Rahimi",
+    title: "Projects | Yahya Rahimi, Software Engineer",
     description:
-      "Products built end to end by Yahya Rahimi, from nonprofit platforms and SaaS features to developer tools.",
+      "Production systems and tools built by Yahya Rahimi, including Health Compass, a multi-tenant SaaS wellness assessment platform on Supabase and PostgreSQL.",
+  },
+  "/projects/health-compass": {
+    title: "Health Compass Case Study | Yahya Rahimi",
+    description:
+      "How Health Compass is built: a multi-tenant SaaS assessment platform on Astro, Supabase and PostgreSQL row-level security, with serverless scoring, autosave, PDF export and email delivery.",
   },
   "/resume": {
-    title: "Resume | Yahya Rahimi",
+    title: "Resume | Yahya Rahimi, Software Engineer",
     description:
-      "Resume of Yahya Rahimi, software engineer specializing in backend systems, microservices, and full-stack web development.",
+      "Resume of Yahya Rahimi, software engineer with 7+ years in Java, Scala, microservices, AWS and CI/CD. Oceanside, CA (San Diego County) and US-remote.",
   },
   "/contact": {
-    title: "Contact | Yahya Rahimi",
+    title: "Contact | Yahya Rahimi, Software Engineer",
     description:
-      "Get in touch with Yahya Rahimi, a software engineer in San Diego open to new roles.",
+      "Get in touch with Yahya Rahimi, a software engineer in Oceanside, CA (San Diego County) open to Backend, Full-Stack, and DevOps roles.",
   },
 };
 routeMeta["/home"] = routeMeta["/"];
@@ -54,7 +59,7 @@ const greeting = {
   logo_name: "YahyaRahimi",
   nickname: "The man from Mars",
   subTitle:
-    "Software Engineer with 5+ years of experience building scalable cloud systems and high-performance microservices in Java and Scala. I enjoy working across the full stack, from multi-tenant SaaS backends to modern web frontends, and shipping software that holds up in production.",
+    "Software Engineer with 7+ years building and operating production systems. I work primarily in Java and Scala, on distributed microservices, REST APIs, and the AWS and CI/CD infrastructure underneath them, and I'm comfortable owning a product the rest of the way to the browser. Recent work includes end-to-end ownership of a multi-tenant SaaS platform, from architecture through deployment.",
 };
 
 const socialMediaLinks = [
@@ -84,7 +89,7 @@ const skills = {
       title: "Backend & Distributed Systems",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Designing scalable microservices and secure RESTful APIs in Java and Scala (Akka HTTP, Play Framework)",
+        "⚡ Designing distributed microservices and secure REST APIs in Java and Scala (Spring Boot, Akka HTTP, Play Framework)",
         "⚡ Performance tuning enterprise data-sync operations, cutting request latency by 30%",
         "⚡ Modeling and migrating data across PostgreSQL, MySQL, MongoDB and DynamoDB with zero data loss",
       ],
@@ -104,8 +109,8 @@ const skills = {
           },
         },
         {
-          skillName: "Spring",
-          fontAwesomeClassname: "simple-icons:spring",
+          skillName: "Spring Boot",
+          fontAwesomeClassname: "simple-icons:springboot",
           style: {
             color: "#6DB33F",
           },
@@ -145,8 +150,8 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive web experiences with React, Next.js and TypeScript",
-        "⚡ Shipping complete products with Astro and Tailwind CSS, including assessment flows, D3 visualizations, PDF export and transactional email",
+        "⚡ Owning products end to end, from backend APIs and data modeling through the interface users touch",
+        "⚡ Building web experiences with React, Next.js, TypeScript, Astro and Tailwind CSS, including assessment flows, D3.js visualizations and PDF export",
         "⚡ Creating application backends with Node.js and serverless functions (Netlify, Supabase)",
       ],
       softwareSkills: [
@@ -201,6 +206,13 @@ const skills = {
           },
         },
         {
+          skillName: "D3.js",
+          fontAwesomeClassname: "simple-icons:d3dotjs",
+          style: {
+            color: "#F9A03C",
+          },
+        },
+        {
           skillName: "HTML5",
           fontAwesomeClassname: "simple-icons:html5",
           style: {
@@ -214,7 +226,7 @@ const skills = {
       fileName: "CloudInfraImg",
       skills: [
         "⚡ Provisioning and optimizing AWS infrastructure (EC2, S3, RDS, IAM, Lambda)",
-        "⚡ Automating CI/CD and infrastructure as code with Terraform, Jenkins and GitHub Actions, cutting deployment times by 50%",
+        "⚡ Automating CI/CD and Infrastructure as Code (IaC) with Terraform, Jenkins and GitHub Actions, cutting deployment times by 50%",
         "⚡ Keeping production observable and reliable with Instana, New Relic and CloudWatch (99.9% availability)",
       ],
       softwareSkills: [
@@ -306,9 +318,9 @@ const degrees = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work and Nonprofit Leadership",
+  subtitle: "Backend, Full-Stack and Cloud Engineering",
   description:
-    "I have spent 8+ years across the full software lifecycle, starting in tier-3 enterprise support, moving into core backend engineering, and now leading product development for a nonprofit. I care about systems that stay fast, observable, and reliable in production.",
+    "7+ years across the full software lifecycle, starting in tier-3 enterprise support, moving into core backend engineering in Java and Scala, and now owning a production SaaS platform end to end.",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -316,14 +328,19 @@ const experience = {
       work: true,
       experiences: [
         {
-          title: "Tech Admin",
+          title: "Software Engineer (role title: Tech Admin)",
           company: "International Ally Federation",
           company_url: "https://allyfederation.org/",
           logo_path: "iaf_logo.png",
           duration: "Aug 2024 - Present",
-          location: "San Diego, CA, USA",
-          description:
-            "Leading development of the IAF website and Health Compass, a production wellness assessment platform, across UI, backend APIs, data persistence, and deployment. Built full-stack features in TypeScript, Astro, and Tailwind CSS, including a multi-section assessment flow, scoring engine, D3 results visualization, PDF export, and email-based results sharing. Currently extending the platform into a multi-tenant SaaS product with Supabase/PostgreSQL, row-level security, and Netlify Edge Functions. Also responsible for platform operations: GitHub Actions CI/CD, GA4 analytics, bilingual English/Farsi UX, and Microsoft 365 administration.",
+          location: "Remote",
+          bullets: [
+            "Owned end-to-end development of Health Compass, a production wellness assessment platform, covering architecture, backend APIs, frontend, data layer, and deployment.",
+            "Built the application in TypeScript, Astro, and Tailwind: multi-section assessment flow, scoring engine, D3 results visualization, PDF export, and email delivery via serverless functions (Resend).",
+            "Architected the platform toward multi-tenant SaaS on Supabase/PostgreSQL with row-level security, autosave APIs, and edge functions, designing tenant isolation from the ground up.",
+            "Ran production operations: GitHub Actions CI/CD, GA4 analytics with cookie consent, and bilingual English/Farsi UX.",
+            "Used AI-assisted development (Cursor, coding agents) as a core workflow, pairing agentic tooling with design docs and human review to ship production-grade code.",
+          ],
           color: "#0E6BA8",
         },
         {
@@ -332,20 +349,29 @@ const experience = {
           company_url: "https://www.servicerocket.com/",
           logo_path: "servicerocket_logo.png",
           duration: "Nov 2019 - Aug 2024",
-          location: "",
-          description:
-            "Designed and implemented scalable backend architectures and microservices in Scala (Akka HTTP, Play Framework) and Java for B2B applications serving thousands of active users. Engineered secure, high-performance REST APIs that cut request latency by 30%, and automated infrastructure as code with Terraform, Jenkins, and GitHub Actions, reducing deployment times by half. Diagnosed production bottlenecks with Instana and New Relic to maintain 99.9% availability, optimized AWS infrastructure (EC2, S3, RDS, IAM), and mentored junior engineers on testing with ScalaTest and Jest.",
+          location: "Hybrid",
+          bullets: [
+            "Designed and implemented scalable backend services and distributed microservices in Scala (Akka HTTP / Play Framework) and Java, modernizing legacy workflows for B2B applications serving thousands of active users.",
+            "Engineered secure, high-throughput REST APIs and data-processing layers, reducing request latency 30% for enterprise customer data-sync operations.",
+            "Diagnosed production bottlenecks and security incidents using Instana and New Relic, systematically reducing error rates and sustaining 99.9% service availability.",
+            "Built Infrastructure as Code pipelines with Terraform, Jenkins, and GitHub Actions, cutting deployment time 50%; provisioned and optimized AWS infrastructure (EC2, S3, RDS, IAM).",
+            "Automated testing workflows in Python and Node.js, recovering approximately 20 engineering hours per month.",
+            "Led code reviews and mentored junior engineers on testing strategy within an Agile team.",
+          ],
           color: "#D7462D",
         },
         {
-          title: "Application Support Engineer",
+          title: "Application Support Engineer, Tier 3",
           company: "ServiceRocket Inc.",
           company_url: "https://www.servicerocket.com/",
           logo_path: "servicerocket_logo.png",
           duration: "Oct 2017 - Nov 2019",
-          location: "",
-          description:
-            "Provided tier-3 technical support for enterprise clients configuring complex Jira workflows, webhooks, and REST API integrations, maintaining a customer satisfaction rating above 90%. Planned and executed large-scale data migrations from Jira Server to Jira Cloud with 100% data integrity and zero business downtime, and built integrations connecting Jira to GitHub and Azure DevOps.",
+          location: "On-site",
+          bullets: [
+            "Delivered tier-3 engineering support on complex Jira workflows, webhooks, and REST API integrations, holding a 90%+ satisfaction rating.",
+            "Planned and executed large-scale Jira Server to Jira Cloud migrations, verifying 100% data integrity across thousands of production records with zero downtime.",
+            "Built Jira integrations with GitHub and Azure DevOps as technical liaison to global enterprise clients.",
+          ],
           color: "#FC9D03",
         },
       ],
@@ -367,13 +393,15 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "yahya_avatar.png",
     description:
-      "I'm currently open to software engineering roles and collaborations. My background covers backend development with Java and Scala, full-stack web development with React and Next.js, and cloud infrastructure on AWS. If you would like to discuss a role or a project, reach out through any of the channels below. I usually reply within 24 hours.",
+      "I'm currently open to Backend, Full-Stack, and DevOps/Cloud engineering roles in San Diego and US-remote. My background is backend engineering in Java and Scala, distributed microservices and REST APIs, AWS and CI/CD infrastructure, and end-to-end ownership of a multi-tenant SaaS platform. If you would like to discuss a role or a project, reach out through any of the channels below. I usually reply within 24 hours.",
+    location: "Oceanside, CA (San Diego County)",
   },
-  // Used only for the Person structured data in SeoHeader.
+  // Used for the Person structured data and the prerendered pages.
   addressSection: {
-    locality: "San Diego",
+    locality: "Oceanside",
     region: "California",
     country: "USA",
+    display: "Oceanside, CA (San Diego County)",
   },
 };
 

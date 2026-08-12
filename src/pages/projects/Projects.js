@@ -43,10 +43,32 @@ class Projects extends Component {
           </Fade>
         </div>
         <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
-          })}
+          {ProjectsData.data
+            .filter((repo) => !repo.earlier)
+            .map((repo) => (
+              <GithubRepoCard key={repo.id} repo={repo} theme={theme} />
+            ))}
         </div>
+        {ProjectsData.data.some((repo) => repo.earlier) && (
+          <div className="earlier-work-div">
+            <h2 className="earlier-work-heading" style={{ color: theme.text }}>
+              Earlier work
+            </h2>
+            <p
+              className="earlier-work-note subTitle"
+              style={{ color: theme.secondaryText }}
+            >
+              Academic and early-career projects, kept for context.
+            </p>
+            <div className="repo-cards-div-main">
+              {ProjectsData.data
+                .filter((repo) => repo.earlier)
+                .map((repo) => (
+                  <GithubRepoCard key={repo.id} repo={repo} theme={theme} />
+                ))}
+            </div>
+          </div>
+        )}
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>

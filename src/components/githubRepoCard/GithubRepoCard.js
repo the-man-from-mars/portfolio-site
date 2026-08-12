@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
 import "./GithubRepoCard.css";
 import { Fade } from "react-reveal";
@@ -26,6 +27,15 @@ export default function GithubRepoCard({ repo, theme }) {
         >
           {repo.description}
         </p>
+        {repo.caseStudy && (
+          <Link
+            className="project-case-study-link"
+            to={repo.caseStudy}
+            style={{ color: theme.text, borderColor: theme.imageHighlight }}
+          >
+            Read the case study
+          </Link>
+        )}
       </div>
     </Fade>
   );

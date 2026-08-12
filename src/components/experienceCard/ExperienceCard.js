@@ -105,8 +105,15 @@ class ExperienceCard extends Component {
                   marginTop: 20,
                 }}
               >
-                <div className="repo-description" />
-                {experience["description"]}
+                {Array.isArray(experience["bullets"]) ? (
+                  <ul className="experience-card-bullets">
+                    {experience["bullets"].map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  experience["description"]
+                )}
               </div>
             </div>
           </div>

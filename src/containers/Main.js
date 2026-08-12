@@ -5,6 +5,7 @@ import Education from "../pages/education/EducationComponent";
 import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
+import HealthCompass from "../pages/caseStudy/HealthCompass";
 import Error404 from "../pages/errors/error404/Error";
 import SeoHeader from "../components/seoHeader/SeoHeader";
 import ResumePage from "../pages/resume/Resume.js";
@@ -62,8 +63,18 @@ export default class Main extends Component {
             render={(props) => <Contact {...props} theme={this.props.theme} />}
           />
 
+          {/* Must precede /projects, and /projects must be exact, or the
+              parent route would match the nested case study path first. */}
+          <Route
+            path="/projects/health-compass"
+            exact
+            render={(props) => (
+              <HealthCompass {...props} theme={this.props.theme} />
+            )}
+          />
           <Route
             path="/projects"
+            exact
             render={(props) => <Projects {...props} theme={this.props.theme} />}
           />
           <Route

@@ -102,7 +102,11 @@ function experienceBody({ experience }) {
       <p><strong>${esc(e.company)}</strong> · ${esc(e.duration)}${
         e.location ? ` · ${esc(e.location)}` : ""
       }</p>
-      <p>${esc(e.description)}</p></section>`
+      ${
+        Array.isArray(e.bullets)
+          ? list(e.bullets)
+          : `<p>${esc(e.description)}</p>`
+      }</section>`
     )
     .join("");
   return `<h1>${esc(experience.title)}</h1>
@@ -131,8 +135,56 @@ function contactBody({ contactPageData, socialMediaLinks }) {
   const a = contactPageData.addressSection;
   return `<h1>${esc(c.title)}</h1><p class="lede">${esc(c.description)}</p>
     <ul>${links}</ul>
-    <p class="muted">${esc(`${a.locality}, ${a.region}, ${a.country}`)}</p>
+    <p class="muted">${esc(a.display)}</p>
     <p><a href="/resume">See my resume</a></p>`;
+}
+
+function healthCompassBody() {
+  return `<h1>Health Compass</h1>
+    <p class="lede">A production wellness assessment platform for the
+    International Ally Federation, built and operated end to end: architecture,
+    backend APIs, frontend, data layer, and deployment.</p>
+    <p class="muted">TypeScript, Astro, Tailwind CSS, Supabase / PostgreSQL,
+    D3.js, Netlify serverless and edge functions, Resend, GitHub Actions.</p>
+    <h2>Problem</h2>
+    <p>The International Ally Federation needed a wellness assessment people
+    could complete themselves, producing a structured, shareable result rather
+    than a raw score, for a bilingual English and Farsi audience. The
+    assessment is long enough that people do not finish it in one sitting, and
+    it collects health-related answers, so partial progress has to survive
+    interruption and every record has to stay scoped to the organization it
+    belongs to.</p>
+    <h2>Architecture</h2>
+    <p>Static Astro pages carry the assessment flow. Progress is written
+    continuously through edge functions into Supabase, where row-level security
+    scopes every row to its tenant. On submit, a serverless function scores the
+    assessment; results render through D3 and can leave the system as a PDF or
+    an email sent through Resend.</p>
+    <h2>Key technical decisions</h2>
+    <ul>
+      <li>Astro instead of a client-side SPA framework, so the flow ships
+      mostly static HTML and loads fast on low-end phones. The tradeoff is that
+      state does not survive navigation, which is why autosave is a server API
+      rather than a client cache.</li>
+      <li>Tenant isolation enforced by PostgreSQL row-level security rather
+      than application code, so a missed filter in a new endpoint cannot leak
+      another tenant's data.</li>
+      <li>Autosave through edge functions, keeping the write path short so
+      saving does not interrupt the person filling out the assessment.</li>
+      <li>Scoring on the server and visualization on the client, so scoring
+      rules are neither exposed nor modifiable in the browser.</li>
+      <li>Email delivery from serverless functions rather than the browser,
+      keeping the provider credential server-side.</li>
+    </ul>
+    <h2>Outcomes</h2>
+    <p>Health Compass is in production. Shipped: a multi-section assessment
+    flow with progress that survives leaving and returning, a server-side
+    scoring engine with D3 results visualization, PDF export and email
+    delivery, a multi-tenant data layer on Supabase and PostgreSQL with
+    row-level security, bilingual English and Farsi UX, GA4 analytics with
+    cookie consent, and GitHub Actions CI/CD.</p>
+    <p><a href="https://allyfederation.org/en/health-compass">View the live
+    platform</a></p>`;
 }
 
 // The bundler fingerprints the PDF, so resolve the real filename from the
@@ -181,14 +233,20 @@ function personSchema({ greeting, socialMediaLinks, experience, contactPageData 
     knowsAbout: [
       "Java",
       "Scala",
+      "Spring Boot",
+      "Akka HTTP",
+      "Play Framework",
+      "Microservices",
+      "REST API design",
+      "Distributed systems",
       "TypeScript",
       "React",
       "Node.js",
       "AWS",
-      "Microservices",
-      "PostgreSQL",
       "Terraform",
+      "Infrastructure as Code",
       "CI/CD",
+      "PostgreSQL",
     ],
   };
 }
@@ -300,6 +358,11 @@ async function main() {
       file: "projects.html",
       body: projectsBody(p, projects),
     },
+    {
+      route: "/projects/health-compass",
+      file: "projects/health-compass.html",
+      body: healthCompassBody(),
+    },
     { route: "/resume", file: "resume.html", body: resumeBody(p) },
     { route: "/contact", file: "contact.html", body: contactBody(p) },
   ];
@@ -313,7 +376,9 @@ async function main() {
       description: meta.description,
       schema,
     });
-    fs.writeFileSync(path.join(BUILD, r.file), html);
+    const out = path.join(BUILD, r.file);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(out, html);
     console.log(`  prerendered ${r.route.padEnd(12)} -> ${r.file}`);
   }
 

@@ -19,4 +19,13 @@ export const GlobalStyles = createGlobalStyle`
     // padding: 0;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
+  }
+
+  /* Flex items default to min-width: auto, which stops them shrinking below
+     their content's intrinsic width. Without this, any wide child (such as
+     the case study's architecture diagram) stretches the page instead of
+     scrolling inside its own container on narrow screens. */
+  body > div {
+    min-width: 0;
+    max-width: 100%;
   }`;

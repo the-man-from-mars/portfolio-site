@@ -1,0 +1,149 @@
+.case-study-main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.case-study-body {
+  max-width: 860px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+  text-align: left;
+}
+
+/* Sections must be allowed to shrink below their content's intrinsic width,
+   otherwise the diagram's min-width stretches the whole page. */
+.case-study-section {
+  min-width: 0;
+}
+
+.case-study-header {
+  margin-top: 40px;
+}
+
+.case-study-eyebrow {
+  font-family: "Google Sans Regular";
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.case-study-title {
+  font-family: "Google Sans Medium";
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
+.case-study-standfirst {
+  font-family: "Google Sans Regular";
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.case-study-stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.case-study-stack li {
+  font-family: "Google Sans Regular";
+  font-size: 14px;
+  border: 1px solid rgba(220, 47, 2, 0.35);
+  border-radius: 30px;
+  padding: 4px 12px;
+}
+
+.case-study-section {
+  margin-top: 48px;
+}
+
+.case-study-section h2 {
+  font-family: "Google Sans Medium";
+  font-size: 30px;
+  margin: 0 0 14px;
+}
+
+.case-study-section p {
+  font-family: "Google Sans Regular";
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+
+.case-study-list {
+  font-family: "Google Sans Regular";
+  font-size: 17px;
+  line-height: 1.7;
+  padding-left: 1.2rem;
+  margin: 0 0 14px;
+}
+
+.case-study-list li {
+  margin-bottom: 8px;
+}
+
+.decision {
+  margin-bottom: 30px;
+}
+
+.decision h3 {
+  font-family: "Google Sans Medium";
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.decision-tradeoff {
+  border-left: 3px solid rgba(220, 47, 2, 0.4);
+  padding-left: 14px;
+  font-size: 16px !important;
+}
+
+.architecture-diagram {
+  margin: 22px 0 6px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.architecture-diagram svg {
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+}
+
+.case-study-back {
+  margin-top: 50px;
+  font-family: "Google Sans Regular";
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .case-study-title {
+    font-size: 32px;
+  }
+
+  .case-study-standfirst {
+    font-size: 16px;
+  }
+
+  .case-study-section h2 {
+    font-size: 24px;
+  }
+
+  .case-study-section p,
+  .case-study-list {
+    font-size: 15px;
+  }
+
+  .decision h3 {
+    font-size: 18px;
+  }
+}

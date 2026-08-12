@@ -23,6 +23,11 @@
   status = 200
 
 [[redirects]]
+  from = "/projects/health-compass"
+  to = "/projects/health-compass.html"
+  status = 200
+
+[[redirects]]
   from = "/projects"
   to = "/projects.html"
   status = 200

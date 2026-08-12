@@ -5,7 +5,7 @@
       "name": "Health Compass",
       "createdAt": "2025-03-01T00:00:00Z",
       "url": "https://allyfederation.org/en/health-compass",
-      "description": "Production wellness assessment platform for the International Ally Federation, featuring a multi-section assessment flow, scoring engine, D3 sunburst results, PDF export, email sharing, and multi-tenant SaaS foundations on Supabase and PostgreSQL.",
+      "description": "Production wellness assessment platform for the International Ally Federation. Multi-section assessment flow, scoring engine, D3 results visualization, PDF export, and email delivery through Netlify serverless functions (Resend). Architected toward multi-tenant SaaS on Supabase/PostgreSQL with row-level security, autosave APIs, and edge functions.",
       "isFork": false,
       "languages": [
         {
@@ -19,8 +19,25 @@
         {
           "name": "Tailwind CSS",
           "iconifyClass": "logos-tailwindcss-icon"
+        },
+        {
+          "name": "Supabase",
+          "iconifyClass": "simple-icons:supabase"
+        },
+        {
+          "name": "PostgreSQL",
+          "iconifyClass": "simple-icons:postgresql"
+        },
+        {
+          "name": "D3.js",
+          "iconifyClass": "simple-icons:d3dotjs"
+        },
+        {
+          "name": "Netlify",
+          "iconifyClass": "simple-icons:netlify"
         }
-      ]
+      ],
+      "caseStudy": "/projects/health-compass"
     },
     {
       "id": "iaf-website",
@@ -39,8 +56,34 @@
           "iconifyClass": "logos-typescript-icon"
         },
         {
+          "name": "Tailwind CSS",
+          "iconifyClass": "logos-tailwindcss-icon"
+        },
+        {
           "name": "JavaScript",
           "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "Netlify",
+          "iconifyClass": "simple-icons:netlify"
+        }
+      ]
+    },
+    {
+      "id": "miro-chart-plugin",
+      "name": "Miro Chart Plugin",
+      "createdAt": "2022-08-01T00:00:00Z",
+      "url": "https://github.com/the-man-from-mars",
+      "description": "Miro board plugin that renders live charts from Google Sheets data, built with JavaScript, React, and the Google Sheets API.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
         }
       ]
     },
@@ -64,32 +107,15 @@
           "name": "MySQL",
           "iconifyClass": "logos-mysql"
         }
-      ]
-    },
-    {
-      "id": "miro-chart-plugin",
-      "name": "Miro Chart Plugin",
-      "createdAt": "2022-08-01T00:00:00Z",
-      "url": "https://github.com/the-man-from-mars",
-      "description": "Miro board plugin that renders live charts from Google Sheets data, built with JavaScript, React, and the Google Sheets API.",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
-        {
-          "name": "React",
-          "iconifyClass": "logos-react"
-        }
-      ]
+      ],
+      "earlier": true
     },
     {
       "id": "university-resource-management",
       "name": "University Resource Management System",
       "createdAt": "2017-03-01T00:00:00Z",
       "url": "https://github.com/the-man-from-mars",
-      "description": "Resource management system for university staff and students, built with PHP, Bootstrap, and MySQL.",
+      "description": "Resource management system for university staff and students, built with PHP, Bootstrap, and MySQL. Undergraduate capstone project.",
       "isFork": false,
       "languages": [
         {
@@ -104,7 +130,8 @@
           "name": "MySQL",
           "iconifyClass": "logos-mysql"
         }
-      ]
+      ],
+      "earlier": true
     }
   ]
 }
